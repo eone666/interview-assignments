@@ -36,3 +36,21 @@
 - Использование Docker и Docker Compose.
 
 Убедитесь, что вы предоставляете инструкции по запуску вашего приложения с использованием Docker Compose и любые другие необходимые детали.
+
+---
+
+## Running
+
+Requires Node.js 18+.
+
+```bash
+cp .env.sample .env   # VITE_API_BASEURL, defaults to http://localhost:3000/
+npm install
+npm run dev           # client (vite) and mock API (json-server) in one command
+```
+
+- `npm run dev-client` — client only;
+- `npm run dev-api` — mock API only: `json-server` over [`data/db.json`](./data/db.json);
+- `npm run build` — type-check and production build into `dist/`;
+- `npm run preview` — preview the built version;
+- `npm run lint` — ESLint with autofix.
