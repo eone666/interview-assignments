@@ -39,6 +39,18 @@
 
 ---
 
+## Implementation
+
+- **Dashboard** — four Recharts diagrams: a monthly currency-rate line chart, KPI completion, a bar chart of requests by status, and a horizontal bar chart;
+- **New request** — a `react-hook-form` + `zod` form with every field type from the brief (text, number, money, masked phone, select, calendar, checkbox, radio group); the "Clear" button unlocks as soon as one field is filled, and the submit result is shown in a toast;
+- **My / accepted / rejected requests** — a 10-column table, pagination (100 pages of 20 records), delete with confirmation, pulling a record up from the next page and renumbering the rows;
+- state in Redux Toolkit, side effects in redux-saga, requests via axios, UI in Tailwind on top of Radix primitives, icons imported as components through `vite-plugin-svgr`;
+- responsive layout; the sidebar collapses on small screens.
+
+The mock API is `json-server` over [`data/db.json`](./data/db.json), with the base URL taken from an environment variable.
+
+---
+
 ## Running
 
 Requires Node.js 18+.

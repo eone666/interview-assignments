@@ -52,3 +52,14 @@ post [178.90.223.230:6132/home/SetData](178.90.223.230:6132/home/SetData)
 `$ yarn start` - start dev server
 
 `$ yarn build` - get production build
+
+---
+
+## Implementation
+
+- a site filter and a report table (name, description, date, status, whether there are remarks);
+- a 3-step add form, each step full-page, with a progress indicator;
+- step 2 holds a nested registry of remarks, step 3 is confirmation plus the list of validation errors;
+- layout on Bootstrap 4 via `react-bootstrap`, validation with Formik + Yup.
+
+Dictionaries and saving go through the API from the brief (`http://178.90.223.230:6132`). That is the company's own test environment — if it is unreachable, the lists stay empty.

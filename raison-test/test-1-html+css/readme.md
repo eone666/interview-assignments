@@ -7,3 +7,14 @@
 
 -   соответствие макету и внимательность
 -   умение работать с изображениями оптимальным образом
+
+---
+
+## Implementation
+
+Plain HTML and CSS, no frameworks: a hand-written reset, SVG graphics (map, flags), and support not only for the desktop and mobile widths in the mockup but for the range in between.
+
+```bash
+npm install
+npm run dev
+```

@@ -38,3 +38,16 @@
 
 После запроса должен открываться попап с текстом "Success!" или "Error!" в зависимости от успешности.
 Должно быть возможно закрыть этот попап нажав на кнопку `<` (Назад) которая есть на многих андроид устройствах.
+
+---
+
+## Implementation
+
+Two-step login flow on React Router: email validation with the value kept in `sessionStorage`, a "Hold to proceed" button with a 500 ms hold and a timer that counts back down if released early, a `POST` to `api/endpoint` on the second step, and a result popup that closes with the hardware Back button.
+
+Requests to `/api/*` are proxied to the express mock server on `:4040` — see [`vite.config.ts`](./vite.config.ts) and [`server.js`](./server.js).
+
+```bash
+npm install
+npm run dev      # client (vite) and mock server in one command
+```
